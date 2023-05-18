@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocarina Simulator</title>
+    <link rel="icon" type="image/x-icon" href="Navi.png">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <p id="title"> Ocarina Simulator</p>
+    <div class="imagem">
+        <img id="ocarina" src="Ocarina.gif" alt="">
+    </div>
+
+    <div class="keys">
+        <div data-key="keyq" class="key">Q</div>
+        <div data-key="keyw" class="key">W</div>
+        <div data-key="keye" class="key">E</div>
+        <div data-key="keya" class="key">A</div>
+        <div data-key="keys" class="key">S</div>
+    </div>
+
+    <div class="composer">
+        <input type="text" id="input" placeholder="Composition..." />
+        <button>Tocar</button>
+    </div>
+
+    <footer>© Dereck Luiz dos Santos.</footer>
+
+    <audio id="s_keyq" src="sounds/Short_Notes_Ocarina_D (L).wav"></audio>
+    <audio id="s_keyw" src="sounds/Short_Notes_Ocarina_F (R).wav"></audio>
+    <audio id="s_keye" src="sounds/Short_Notes_Ocarina_A (Y).wav"></audio>
+    <audio id="s_keya" src="sounds/Short_Notes_Ocarina_B (X).wav"></audio>
+    <audio id="s_keys" src="sounds/Short_Notes_Ocarina_D2 (A).wav"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
