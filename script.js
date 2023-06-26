@@ -70,3 +70,15 @@ document.addEventListener('keydown', event => {
   }
 });
 
+let lastTimeout;
+
+function debounce (callback, wait) {
+  if(lastTimeout) clearTimeout(lastTimeout)
+  lastTimeout = setTimeout(callback, wait)
+}
+
+document.body.addEventListener('keyup', () => {
+  debounce(() => {
+    pressedKeys = [];
+  }, 2000)
+})
