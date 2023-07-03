@@ -27,7 +27,9 @@ function playSound(sound){
     }
 }
 
-//
+//EPONAS SONG 
+
+
 
 function playComposition(songArray){
     let wait = 0;
@@ -39,32 +41,25 @@ function playComposition(songArray){
     }
 }
 
-// cria um array com a sequência de teclas que devem ser pressionadas
 const sequence = ['s', 'a', 'e','s', 'a', 'e'];
 
-// carrega os arquivos de áudio em formato .wav
 const audio1 = new Audio('sounds/Song_Correct.wav');
 const audio2 = new Audio('sounds/Eponas Song.mp3');
 
-// cria uma variável para armazenar a sequência de teclas pressionadas pelo usuário
 let pressedKeys = [];
 
-// adiciona um listener para o evento 'keydown'
 document.addEventListener('keydown', event => {
-  // adiciona a tecla pressionada ao final do array 'pressedKeys'
+
   pressedKeys.push(event.key);
 
-  // verifica se a sequência de teclas pressionadas corresponde à sequência desejada
+
   if (pressedKeys.join('') === sequence.join('')) {
-    // inicia a reprodução do primeiro arquivo de áudio imediatamente após a sequência de teclas correta ser pressionada
     
     audio1.play();
 
-    // aguarda 1 segundo (1000 milissegundos) e inicia a reprodução do segundo arquivo de áudio
     setTimeout(() => {
       audio2.play();
 
-      // limpa o array 'pressedKeys' para permitir que o usuário inicie uma nova sequência
       pressedKeys = [];
     }, 1000);
   }
